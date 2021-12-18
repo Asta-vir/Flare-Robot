@@ -1,3 +1,19 @@
+# Config files, logs and stuff
+/modules/helper_funcs/temp.txt
+Flare_Robot/elevated_users.json
+Flare_Robot/config.py
+Flare_Robot/config.ini
+log.txt
+kangsticker.png
+updates.txt
+start_service.bat
+
+# Session files
+Flare_Robot/*.session
+Flare_Robot/*.session-journal
+.session-journal
+*.session
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +143,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS code and shit
+*.pyc
+.idea/
+.project
+.pydevproject
+.directory
+.vscode
