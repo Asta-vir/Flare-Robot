@@ -11,7 +11,7 @@ start_service.bat
 # Session files
 Flare_Robot/*.session
 Flare_Robot/*.session-journal
-.session-journal
+saitama.session-journal
 *.session
 
 # Byte-compiled / optimized / DLL files
