@@ -6,7 +6,7 @@ import bs4
 import requests
 from telethon import types
 from telethon.tl import functions
-from SaitamaRobot.events import register
+from Flare_Robot.events import register
 
 langi = "en"
 
