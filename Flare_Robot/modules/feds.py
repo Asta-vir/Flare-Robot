@@ -20,7 +20,7 @@ from Flare_Robot import (
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
 from Flare_Robot.modules.helper_funcs.alternate import send_message
 from Flare_Robot.modules.helper_funcs.chat_status import is_user_admin
-from FlareRobot.modules.helper_funcs.extraction import (
+from Flare_Robot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
