@@ -23,7 +23,7 @@ from Flare_Robot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from SaitamaRobot.modules import ALL_MODULES
+from Flare_Robot.modules import ALL_MODULES
 import Flare_Robot.modules.sql.users_sql as sql
 from Flare_Robot.modules.helper_funcs.chat_status import is_user_admin
 from Flare_Robot.modules.helper_funcs.misc import paginate_modules
