@@ -7,7 +7,7 @@ from telegram.ext import CommandHandler, run_async
 
 import Flare_Robot.modules.sql.notes_sql as sql
 from Flare_Robot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from Flar_Robot.__main__ import DATA_IMPORT
+from Flare_Robot.__main__ import DATA_IMPORT
 from Flare_Robot.modules.helper_funcs.chat_status import user_admin
 from Flare_Robot.modules.helper_funcs.alternate import typing_action
 
