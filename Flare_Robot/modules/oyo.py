@@ -5,7 +5,7 @@ from pyrogram import filters
 
 from Flare_Robot import pbot as app
 from Flare_Robot.utils.errors import capture_err
-from Flare_Robot.utils.dbfunctions import get_couple, save_couple
+from Flare_Robot.utils.dbfunctions import get_oyo_couple, save_oyo_couple
 
 __mod_name__ = "oyo"
 __help__ = "/oyo - To Choose OYO Couple Of The Day"
