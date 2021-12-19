@@ -6,8 +6,8 @@ import time
 import uuid
 from io import BytesIO
 
-import SaitamaRobot.modules.sql.feds_sql as sql
-from SaitamaRobot import (
+import Flare_Robot.modules.sql.feds_sql as sql
+from Flare_Robot import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
