@@ -191,7 +191,6 @@ def test(update: Update, context: CallbackContext):
     print(update.effective_message)
 
 
-@run_async
 @telethn.on(events.NewMessage(pattern="/alive"))
 async def awake(event):
   ғʟᴀʀᴇ = event.sender.first_name
