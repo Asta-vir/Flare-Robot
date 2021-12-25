@@ -205,7 +205,7 @@ async def awake(event):
   FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
-          Button.url("📢 Updates", "https://t.me/Frea_Updates")
+          Button.url("📢 Updates", "https://t.me/Freia_Updates")
       ]
   ]
   await telethn.send_file(
