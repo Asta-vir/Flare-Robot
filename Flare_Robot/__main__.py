@@ -208,9 +208,9 @@ async def awake(event):
   ]
   await telethn.send_file(
       event.chat_id,
-      Flare_PHOTO,
+      FLARE_PHOTO,
       caption = Flare,
-      buttons = Flare_BUTTON,
+      buttons = FLARE_BUTTON,
   )
 
 
