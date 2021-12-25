@@ -94,6 +94,7 @@ if ENV:
     BOT_ID = os.environ.get ("BOT_ID", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
+    FLARE_PHOTO = os.environ.get("CUTIEPII_PHOTO", True)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -160,6 +161,7 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
     BOT_USERNAME = Config.BOT_USERNAME
+    FLARE_PHOTO = Config.CUTIEPII_PHOTO
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
