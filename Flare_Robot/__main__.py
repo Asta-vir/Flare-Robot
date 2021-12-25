@@ -75,6 +75,8 @@ def get_readable_time(seconds: int) -> str:
 
 GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
 
+FLARE_PHOTO = "https://telegra.ph/file/2a171330f0ad1fc02465c.jpg"
+
 PM_START_TEXT = """
 ────「 {} 」────
 *Hey! {},*
