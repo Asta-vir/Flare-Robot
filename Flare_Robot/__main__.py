@@ -200,7 +200,7 @@ async def awake(event):
   ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
   ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
   ғʟᴀʀᴇ += "**♡ python-Telegram-Bot: 13.7**\n\n"
-  Flare_BUTTON = [
+  FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
           Button.url("📢 Updates", "https://t.me/Frea_Updates")
@@ -209,7 +209,7 @@ async def awake(event):
   await telethn.send_file(
       event.chat_id,
       FLARE_PHOTO,
-      caption = Flare,
+      caption = FLARE,
       buttons = FLARE_BUTTON,
   )
 
@@ -693,7 +693,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Eren Jaeger is deployed successfully!")
+        LOGGER.info("Flare Robot is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
