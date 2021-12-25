@@ -26,7 +26,7 @@ from Flare_Robot import (
 from Flare_Robot.modules import ALL_MODULES
 import Flare_Robot.modules.sql.users_sql as sql
 from Flare_Robot.modules.helper_funcs.chat_status import is_user_admin
-from Flare_Robot import.events.py import register
+from Flare_Robot.events.py import register
 from Flare_Robot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
