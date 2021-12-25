@@ -47,6 +47,28 @@ from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
 
+@telethn.on(events.NewMessage(pattern="/alive"))
+async def awake(event):
+  ғʟᴀʀᴇ = event.sender.first_name
+  ғʟᴀʀᴇ = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
+  ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n"
+  ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
+  ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
+  ғʟᴀʀᴇ += "**♡ python-Telegram-Bot: 13.7**\n\n"
+  Flare_BUTTON = [
+      [
+          Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
+          Button.url("📢 Updates", "https://t.me/Frea_Updates")
+      ]
+  ]
+  await telethn.send_file(
+      event.chat_id,
+      Flare_PHOTO,
+      caption = Flare,
+      buttons = Flare_BUTTON,
+  )
+
+
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
