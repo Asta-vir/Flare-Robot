@@ -211,7 +211,7 @@ async def awake(event):
   await telethn.send_file(
       event.chat_id,
       FLARE_PHOTO,
-      caption = FLARE,
+      caption = ғʟᴀʀᴇ,
       buttons = FLARE_BUTTON,
   )
 
