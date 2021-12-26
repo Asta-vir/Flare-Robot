@@ -201,7 +201,8 @@ async def awake(event):
   ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n"
   ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
   ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
-  ғʟᴀʀᴇ += "**♡ python-Telegram-Bot: 13.7**\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support **\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
   FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
