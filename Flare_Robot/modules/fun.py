@@ -388,6 +388,7 @@ TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 MEME_HANDLER = DisableAbleCommandHandler(["meme", "memes"], meme)
+GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 
 dispatcher.add_handler(MEME_HANDLER)
 dispatcher.add_handler(WEEBIFY_HANDLER)
@@ -404,6 +405,7 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(GBAM_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
@@ -422,6 +424,7 @@ __command_list__ = [
     "weebify",
     "8ball",
     "meme",
+    "gbam",
     
 ]
 __handlers__ = [
@@ -440,4 +443,5 @@ __handlers__ = [
     WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
     MEME_HANDLER,
+    GBAM_HANDLER,
 ]
