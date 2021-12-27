@@ -129,17 +129,6 @@ def abuse(update, context):
 
 
 @run_async
-def gbun(update, context):
-    user = update.effective_user
-    chat = update.effective_chat
-
-    if update.effective_message.chat.type == "private":
-        return
-    if int(user.id) in DEV_USERS or int(user.id) in SUPPORT_USERS:
-        context.bot.sendMessage(chat.id, (random.choice(fun.GBUN)))
-
-
-@run_async
 def owo(update, context):
     message = update.effective_message
     if not message.reply_to_message:
@@ -422,7 +411,6 @@ __help__ = """
  • `/8ball`*:* predicts using 8ball method
  • `/meme`*:* sends random anime memes
  • `/abuse`*:* abuse
- • `/gbun`*:* for gbun
  • `/owo`*:* owo
 
 """
@@ -443,7 +431,6 @@ SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 MEME_HANDLER = DisableAbleCommandHandler(["meme", "memes"], meme)
 ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse, run_async=True)
-GBUN_HANDLER = CommandHandler("gbun", gbun, run_async=True)
 OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
 
 dispatcher.add_handler(MEME_HANDLER)
@@ -462,7 +449,6 @@ dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 dispatcher.add_handler(ABUSE_HANDLER)
-dispatcher.add_handler(GBUN_HANDLER)
 dispatcher.add_handler(OWO_HANDLER)
 
 __mod_name__ = "Fun"
@@ -482,7 +468,6 @@ __command_list__ = [
     "weebify",
     "8ball",
     "meme",
-    "gbun",
     "owo",
     "abuse",
     
@@ -505,5 +490,4 @@ __handlers__ = [
     MEME_HANDLER,
     ABUSE_HANDLER,
     OWO_HANDLER,
-    GBUN_HANDLER
 ]
