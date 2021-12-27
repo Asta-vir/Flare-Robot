@@ -211,7 +211,7 @@ earth_ani = [
             "🌏"
 ]
 
-@bot.on_message(filters.command("meme", f"meme@{BOT_USERNAME}"))
+@pbot.on_message(filters.command("meme", f"meme@{BOT_USERNAME}"))
 def meme(_,message):
 	r = requests.get('https://nksamamemeapi.pythonanywhere.com').json()
 	pic = r['image']
@@ -219,7 +219,7 @@ def meme(_,message):
 	bot.send_photo(message.chat.id , pic , caption=title)
 
     
-@bot.on_message(filters.command("hentaimeme", "hmeme", f"hmeme@{BOT_USERNAME}"))
+@pbot.on_message(filters.command("hentaimeme", "hmeme", f"hmeme@{BOT_USERNAME}"))
 def hmeme(_,message):
 	r = requests.get('https://nksamamemeapi.pythonanywhere.com/get/hentaimemes').json()
 	pic = r['image']
