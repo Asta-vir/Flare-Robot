@@ -461,8 +461,9 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(ABUSE_STRINGS)
-dispatcher.add_handler(GBUN)
+dispatcher.add_handler(ABUSE_HANDLER)
+dispatcher.add_handler(GBUN_HANDLER)
+dispatcher.add_handler(OWO_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
