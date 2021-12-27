@@ -26,6 +26,16 @@ def runs(update: Update, context: CallbackContext):
     update.effective_message.reply_text(temp)
 
 
+def gbam(update, context):
+    user = update.effective_user
+    chat = update.effective_chat
+    bot, args = context.bot, context.args
+    message = update.effective_message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+
 @run_async
 def sanitize(update: Update, context: CallbackContext):
     message = update.effective_message
