@@ -8,6 +8,7 @@ import urllib.request
 
 import Flare_Robot.modules.fun_strings as fun_strings
 from Flare_Robot import dispatcher
+from Flare_Robot.modules.helper_funcs.alternate import typing_action
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
 from Flare_Robot.modules.helper_funcs.chat_status import is_user_admin
 from Flare_Robot.modules.helper_funcs.extraction import extract_user
