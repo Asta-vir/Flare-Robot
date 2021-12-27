@@ -9,7 +9,7 @@ from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
 import Flare_Robot.modules.helper_funcs.fun_strings as fun
-from Flare_Robot import LOGGER, DEMONS, SUPPORT_USERS, dispatcher
+from Flare_Robot import LOGGER, DEMONS, DEV_USERS, dispatcher
 from Flare_Robot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
