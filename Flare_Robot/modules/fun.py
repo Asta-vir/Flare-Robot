@@ -421,6 +421,10 @@ __help__ = """
  • `/pat`*:* pats a user, or get patted
  • `/8ball`*:* predicts using 8ball method
  • `/meme`*:* sends random anime memes
+ • `/abuse`*:* abuse
+ • `/gbun`*:* for gbun
+ • `/owo`*:* owo
+
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
@@ -438,6 +442,9 @@ TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 MEME_HANDLER = DisableAbleCommandHandler(["meme", "memes"], meme)
+ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
+GBUN_HANDLER = DisableAbleCommandHandler("gbun", gbun)
+OWO_HANDLER =DisableAbleCommandHandler("owo", owo)
 
 dispatcher.add_handler(MEME_HANDLER)
 dispatcher.add_handler(WEEBIFY_HANDLER)
@@ -454,6 +461,8 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(ABUSE_STRINGS)
+dispatcher.add_handler(GBUN)
 
 __mod_name__ = "Fun"
 __command_list__ = [
@@ -472,6 +481,10 @@ __command_list__ = [
     "weebify",
     "8ball",
     "meme",
+    "gbun",
+    "owo",
+    "abuse",
+    
 ]
 __handlers__ = [
     RUNS_HANDLER,
@@ -489,4 +502,7 @@ __handlers__ = [
     WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
     MEME_HANDLER,
+    ABUSE_HANDLER,
+    OWO_HANDLER,
+    GBUN_HANDLER
 ]
