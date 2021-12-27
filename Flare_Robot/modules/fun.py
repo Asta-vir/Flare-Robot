@@ -118,57 +118,6 @@ def slap(update: Update, context: CallbackContext):
 
 
 @run_async
-def abuse(update, context):
-    # reply to correct message
-    reply_text = (
-        update.effective_message.reply_to_message.reply_text
-        if update.effective_message.reply_to_message
-        else update.effective_message.reply_text
-    )
-    reply_text(random.choice(fun.ABUSE_STRINGS))
-
-
-@run_async
-def owo(update, context):
-    message = update.effective_message
-    if not message.reply_to_message:
-        message.reply_text("I need a message to meme.")
-    else:
-        faces = [
-            "(・`ω´・)",
-            ";;w;;",
-            "owo",
-            "UwU",
-            ">w<",
-            "^w^",
-            r"\(^o\) (/o^)/",
-            "( ^ _ ^)∠☆",
-            "(ô_ô)",
-            "~:o",
-            ";____;",
-            "(*^*)",
-            "(>_",
-            "(♥_♥)",
-            "*(^O^)*",
-            "((+_+))",
-        ]
-        reply_text = re.sub(r"[rl]", "w", message.reply_to_message.text)
-        reply_text = re.sub(r"[ｒｌ]", "ｗ", message.reply_to_message.text)
-        reply_text = re.sub(r"[RL]", "W", reply_text)
-        reply_text = re.sub(r"[ＲＬ]", "Ｗ", reply_text)
-        reply_text = re.sub(r"n([aeiouａｅｉｏｕ])", r"ny\1", reply_text)
-        reply_text = re.sub(r"ｎ([ａｅｉｏｕ])", r"ｎｙ\1", reply_text)
-        reply_text = re.sub(r"N([aeiouAEIOU])", r"Ny\1", reply_text)
-        reply_text = re.sub(r"Ｎ([ａｅｉｏｕＡＥＩＯＵ])", r"Ｎｙ\1", reply_text)
-        reply_text = re.sub(r"\!+", " " + random.choice(faces), reply_text)
-        reply_text = re.sub(r"！+", " " + random.choice(faces), reply_text)
-        reply_text = reply_text.replace("ove", "uv")
-        reply_text = reply_text.replace("ｏｖｅ", "ｕｖ")
-        reply_text += " " + random.choice(faces)
-        message.reply_to_message.reply_text(reply_text)
-
-
-@run_async
 def pat(update: Update, context: CallbackContext):
     bot = context.bot
     args = context.args
@@ -410,8 +359,6 @@ __help__ = """
  • `/pat`*:* pats a user, or get patted
  • `/8ball`*:* predicts using 8ball method
  • `/meme`*:* sends random anime memes
- • `/abuse`*:* abuse
- • `/owo`*:* owo
 
 """
 
@@ -430,8 +377,6 @@ TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 MEME_HANDLER = DisableAbleCommandHandler(["meme", "memes"], meme)
-ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse, run_async=True)
-OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
 
 dispatcher.add_handler(MEME_HANDLER)
 dispatcher.add_handler(WEEBIFY_HANDLER)
@@ -448,8 +393,6 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(ABUSE_HANDLER)
-dispatcher.add_handler(OWO_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
@@ -468,8 +411,6 @@ __command_list__ = [
     "weebify",
     "8ball",
     "meme",
-    "owo",
-    "abuse",
     
 ]
 __handlers__ = [
@@ -488,6 +429,4 @@ __handlers__ = [
     WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
     MEME_HANDLER,
-    ABUSE_HANDLER,
-    OWO_HANDLER,
 ]
