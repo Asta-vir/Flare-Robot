@@ -117,7 +117,7 @@ def slap(update: Update, context: CallbackContext):
     reply_text(reply, parse_mode=ParseMode.HTML)
 
 
-@run_asycn
+@run_async
 def abuse(update, context):
     # reply to correct message
     reply_text = (
@@ -128,7 +128,7 @@ def abuse(update, context):
     reply_text(random.choice(fun.ABUSE_STRINGS))
 
 
-@run_asycn
+@run_async
 def gbun(update, context):
     user = update.effective_user
     chat = update.effective_chat
@@ -139,7 +139,7 @@ def gbun(update, context):
         context.bot.sendMessage(chat.id, (random.choice(fun.GBUN)))
 
 
-@run_asycn
+@run_async
 def owo(update, context):
     message = update.effective_message
     if not message.reply_to_message:
