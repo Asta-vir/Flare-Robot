@@ -18,7 +18,7 @@ from Flare_Robot.modules.helper_funcs.alternate import typing_action
 from Flare_Robot.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update, Bot
 from telegram.error import BadRequest
-from telegram.ext import CallbackContext, run_async, Filters
+from telegram.ext import CallbackContext, Filters
 from telegram.utils.helpers import escape_markdown
 
 GIF_ID = "CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE"
