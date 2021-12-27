@@ -117,6 +117,68 @@ def slap(update: Update, context: CallbackContext):
     reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+@run_asycn
+def abuse(update, context):
+    # reply to correct message
+    reply_text = (
+        update.effective_message.reply_to_message.reply_text
+        if update.effective_message.reply_to_message
+        else update.effective_message.reply_text
+    )
+    reply_text(random.choice(fun.ABUSE_STRINGS))
+
+
+@run_asycn
+def gbun(update, context):
+    user = update.effective_user
+    chat = update.effective_chat
+
+    if update.effective_message.chat.type == "private":
+        return
+    if int(user.id) in DEV_USERS or int(user.id) in SUPPORT_USERS:
+        context.bot.sendMessage(chat.id, (random.choice(fun.GBUN)))
+
+
+@run_asycn
+def owo(update, context):
+    message = update.effective_message
+    if not message.reply_to_message:
+        message.reply_text("I need a message to meme.")
+    else:
+        faces = [
+            "(・`ω´・)",
+            ";;w;;",
+            "owo",
+            "UwU",
+            ">w<",
+            "^w^",
+            r"\(^o\) (/o^)/",
+            "( ^ _ ^)∠☆",
+            "(ô_ô)",
+            "~:o",
+            ";____;",
+            "(*^*)",
+            "(>_",
+            "(♥_♥)",
+            "*(^O^)*",
+            "((+_+))",
+        ]
+        reply_text = re.sub(r"[rl]", "w", message.reply_to_message.text)
+        reply_text = re.sub(r"[ｒｌ]", "ｗ", message.reply_to_message.text)
+        reply_text = re.sub(r"[RL]", "W", reply_text)
+        reply_text = re.sub(r"[ＲＬ]", "Ｗ", reply_text)
+        reply_text = re.sub(r"n([aeiouａｅｉｏｕ])", r"ny\1", reply_text)
+        reply_text = re.sub(r"ｎ([ａｅｉｏｕ])", r"ｎｙ\1", reply_text)
+        reply_text = re.sub(r"N([aeiouAEIOU])", r"Ny\1", reply_text)
+        reply_text = re.sub(r"Ｎ([ａｅｉｏｕＡＥＩＯＵ])", r"Ｎｙ\1", reply_text)
+        reply_text = re.sub(r"\!+", " " + random.choice(faces), reply_text)
+        reply_text = re.sub(r"！+", " " + random.choice(faces), reply_text)
+        reply_text = reply_text.replace("ove", "uv")
+        reply_text = reply_text.replace("ｏｖｅ", "ｕｖ")
+        reply_text += " " + random.choice(faces)
+        message.reply_to_message.reply_text(reply_text)
+
+
 @run_async
 def pat(update: Update, context: CallbackContext):
     bot = context.bot
