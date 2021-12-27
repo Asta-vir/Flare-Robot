@@ -25,7 +25,7 @@ def runs(update: Update, context: CallbackContext):
         temp = "Run everyone, they just dropped a bomb 💣💣"
     update.effective_message.reply_text(temp)
 
-
+@typing_action
 def gbam(update, context):
     user = update.effective_user
     chat = update.effective_chat
