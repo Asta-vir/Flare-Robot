@@ -3,7 +3,7 @@ import re
 
 from pyrogram import filters
 
-from Flare_Robot import pgram, BOT_USERNAME
+from Flare_Robot import pbot, BOT_USERNAME
 from Flare_Robot.utils.errors import capture_err
 from Flare_Robot.utils.permissions import adminsOnly
 from Flare_Robot.modules.mongo.karma_mongo import (alpha_to_int, get_karma,
