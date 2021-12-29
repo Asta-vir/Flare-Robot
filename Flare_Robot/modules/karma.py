@@ -23,7 +23,7 @@ regex_downvote = r"^(\-|\-\-|\-1|👎|noob|Noob|gross|fuck off)$"
 )
 @capture_err
 async def upvote(_, message):
-    if message.reply_to_message.from_user.id == message.from_user.id:
+    if message.reply_to_message.from_user.id = message.from_user.id:
         return
     chat_id = message.chat.id
     user_id = message.reply_to_message.from_user.id
