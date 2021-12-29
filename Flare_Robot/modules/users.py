@@ -105,7 +105,7 @@ def log_user(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
 
-    sql.update_user(msg.from_user.id, msg.from_user.username, chat.id, chat.title)
+    sql.update_user(msg.from_user.id, msg.from_user.username, chat.id, chat.name)
 
     if msg.reply_to_message:
         sql.update_user(
