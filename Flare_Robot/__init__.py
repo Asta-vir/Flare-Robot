@@ -191,15 +191,30 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("flare", API_ID, API_HASH)
 dispatcher = updater.dispatcher
-pbot = Client("ErenPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("FlarePyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Flare_Robot
+pgram = Client(
+    session_name,
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
+
+
+apps = [pgram]
+DRAGONS = list(DRAGONS) + list(DEV_USERS)
+DEV_USERS = list(DEV_USERS)
+WOLVES = list(WOLVES)
+DEMONS = list(DEMONS)
+TIGERS = list(TIGERS)
+
 
 # Load at end to ensure all prev variables have been set
 from Flare_Robot.modules.helper_funcs.handlers import (
