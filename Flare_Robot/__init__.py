@@ -196,8 +196,9 @@ dispatcher = updater.dispatcher
 pbot = Client("FlarePyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Flare_Robot
+session_name = TOKEN.split(":")[0]
 pgram = Client(
-    session_name=STRING_SESSION,
+    session_name,
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=TOKEN,
