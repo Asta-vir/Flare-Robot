@@ -1,4 +1,4 @@
-from Flare_Robot import pbot as EREN
+from Flare_Robot import pbot as Flare
 from Flare_Robot.utils.errors import capture_err
 from Flare_Robot.utils.dbfunctions import (update_karma, get_karma, get_karmas,
                                    int_to_alpha, alpha_to_int)
@@ -23,7 +23,7 @@ regex_downvote = r"^(\-|\-\-|\-1|👎|noob|Noob|gross|fuck off)$"
 )
 @capture_err
 async def upvote(_, message):
-    if message.reply_to_message.from_user.id = message.from_user.id:
+    if message.reply_to_message.from_user.id == message.from_user.id:
         return
     chat_id = message.chat.id
     user_id = message.reply_to_message.from_user.id
