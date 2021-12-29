@@ -195,7 +195,7 @@ pbot = Client("FlarePyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Flare_Robot
 pgram = Client(
-    session_name,
+    session_name=STRING_SESSION,
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=TOKEN,
