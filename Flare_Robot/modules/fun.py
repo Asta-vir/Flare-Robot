@@ -249,7 +249,7 @@ def goodmorning(update, context):
     message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 	
 
-	
+@run_async	
 def sanitize(update: Update, context: CallbackContext):
     message = update.effective_message
     name = (
@@ -265,7 +265,7 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation(GIF_ID, caption=f"*Sanitizes {name}*")
 
 
-
+@run_async
 def sanitize(update: Update, context: CallbackContext):
     message = update.effective_message
     name = (
@@ -281,6 +281,7 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation(random.choice(fun_strings.GIFS), caption=f"*Sanitizes {name}*")
 
 
+@run_async
 def slap(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
@@ -339,6 +340,7 @@ def slap(update: Update, context: CallbackContext):
     reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+@run_async
 def pat(update: Update, _):
     msg = update.effective_message
     pat = requests.get("https://some-random-api.ml/animu/pat").json()
@@ -348,11 +350,13 @@ def pat(update: Update, _):
         return
     msg.reply_video(link)
 
-	
+
+@run_async	
 def roll(update: Update, context: CallbackContext):
     update.message.reply_text(random.choice(range(1, 7)))
 
 
+@run_async
 def shout(update: Update, context: CallbackContext):
 	args = context.args
 	text = " ".join(args)
@@ -366,10 +370,12 @@ def shout(update: Update, context: CallbackContext):
 	return update.effective_message.reply_text(msg, parse_mode="MARKDOWN")
 
 
+@run_async
 def toss(update: Update, context: CallbackContext):
     update.message.reply_text(random.choice(fun_strings.TOSS))
 
 
+@run_async
 def shrug(update: Update, context: CallbackContext):
     msg = update.effective_message
     reply_text = (
@@ -378,6 +384,7 @@ def shrug(update: Update, context: CallbackContext):
     reply_text(r"¯\_(ツ)_/¯")
 
 
+@run_async
 def bluetext(update: Update, context: CallbackContext):
     msg = update.effective_message
     reply_text = (
@@ -388,6 +395,7 @@ def bluetext(update: Update, context: CallbackContext):
     )
 
 
+@run_async
 def rlg(update: Update, context: CallbackContext):
     eyes = random.choice(fun_strings.EYES)
     mouth = random.choice(fun_strings.MOUTHS)
@@ -400,6 +408,7 @@ def rlg(update: Update, context: CallbackContext):
     update.message.reply_text(repl)
 
 
+@run_async
 def decide(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
@@ -409,6 +418,7 @@ def decide(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.DECIDE))
 
 
+@run_async
 def eightball(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
@@ -418,6 +428,7 @@ def eightball(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.EIGHTBALL))
 
 
+@run_async
 def table(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
@@ -485,6 +496,7 @@ weebyfont = [
 ]
 
 
+@run_async
 def weebify(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
@@ -511,6 +523,7 @@ def weebify(update: Update, context: CallbackContext):
         message.reply_text(string)
 
 
+@run_async
 def gbun(update, context):
     user = update.effective_user
     chat = update.effective_chat
@@ -521,6 +534,7 @@ def gbun(update, context):
         context.bot.sendMessage(chat.id, (random.choice(fun_strings.GBUN)))
 
 
+@run_async
 def gbam(update, context):
     user = update.effective_user
     chat = update.effective_chat
@@ -548,6 +562,7 @@ def gbam(update, context):
         context.bot.sendMessage(chat.id, gbam, parse_mode=ParseMode.HTML)
 
 
+@run_async
 def cuddle(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
@@ -581,11 +596,13 @@ def cuddle(update: Update, context: CallbackContext):
 	    reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+@run_async
 def flirt(update: Update, context: CallbackContext):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_text(random.choice(fun_strings.FLIRT_TEXT))
 
 
+@run_async
 def lewd(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
@@ -626,6 +643,7 @@ def lewd(update: Update, context: CallbackContext):
 	    reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+@run_async
 def romance(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
@@ -666,6 +684,7 @@ def romance(update: Update, context: CallbackContext):
 	    reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 
+@run_async
 def owo(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
@@ -702,6 +721,7 @@ def owo(update: Update, context: CallbackContext):
 
 
 
+@run_async
 def uwu(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
@@ -737,7 +757,7 @@ def uwu(update: Update, context: CallbackContext):
 	        uwu_type = "Text"
 
 	
-
+@run_async
 def blockanimation(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('⬜') 
     for x in range(EDIT_TIMES):
@@ -746,6 +766,7 @@ def blockanimation(bot: Bot, update: Update):
     msg.edit_text('🟥')
 
 
+@run_async
 def clockanimation(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('🕛') 
     for x in range(EDIT_TIMES):
@@ -754,6 +775,7 @@ def clockanimation(bot: Bot, update: Update):
     msg.edit_text('🕚')
 
 
+@run_async
 def earthanimation(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('🌏') 
     for x in range(EDIT_TIMES):
@@ -762,6 +784,7 @@ def earthanimation(bot: Bot, update: Update):
     msg.edit_text('🌍')
 
 
+@run_async
 def moonanimation(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('🌚') 
     for x in range(EDIT_TIMES):
@@ -770,6 +793,7 @@ def moonanimation(bot: Bot, update: Update):
     msg.edit_text('🌙')
 
 
+@run_async
 def bombs(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('💣') 
     for x in range(EDIT_TIMES):
@@ -778,6 +802,7 @@ def bombs(bot: Bot, update: Update):
     msg.edit_text('RIP PLOX...')
 
 
+@run_async
 def hack(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('Target selected') 
     for x in range(EDIT_TIMES):
@@ -786,7 +811,7 @@ def hack(bot: Bot, update: Update):
     msg.edit_text('successful hacked')
 
 
-
+@run_async
 def love(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('❣️') 
     for x in range(EDIT_TIMES):
@@ -795,6 +820,7 @@ def love(bot: Bot, update: Update):
     msg.edit_text('പ്രണയം  😂 ')
 
 
+@run_async
 def kill(bot: Bot, update: Update):
     msg = update.effective_message.reply_text('🔫') 
     for x in range(EDIT_TIMES):
@@ -869,37 +895,37 @@ __help__ = f"""
   ➢ `/police`*:* 🚓
 """
 
-SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=true)
-RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=true)
-SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, run_async=true)
-PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=true)
-ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=true)
-TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=true)
-SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=true)
-BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext, run_async=true)
-RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg, run_async=true)
-DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide, run_async=true)
-EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball, run_async=true)
-TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=true)
-SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout, run_async=true)
-WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, run_async=true)
-GBUN_HANDLER = DisableAbleCommandHandler("gbun", gbun, run_async=true)
-GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=true)
-CUDDLE_HANDLER = DisableAbleCommandHandler("cuddle", cuddle, run_async=true)
-FLIRT_HANDLER = DisableAbleCommandHandler("flirt", flirt, run_async=true)   
-ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance, run_async=true) 
-UWU_HANDLER = DisableAbleCommandHandler("uwu", uwu, run_async=true)
-OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=true)
-GDMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning|good morning)"), goodmorning, friendly="goodmorning", run_async=true)
-GDNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight|good night)"), goodnight, friendly="goodnight", run_async=true)
-KILL_HANDLER = DisableAbleCommandHandler("kill",kill, run_async=true)
-LOVE_HANDLER = DisableAbleCommandHandler("love", love, run_async=true)
-HACK_HANDLER = DisableAbleCommandHandler("hack", hack, run_async=true)
-BOMBS_HANDLER = DisableAbleCommandHandler("bombs",bombs, run_async=true)
-MOONANIMATION_HANDLER = DisableAbleCommandHandler("moonanimation", moonanimation, run_async=true)
-CLOCKANIMATION_HANDLER = DisableAbleCommandHandler("clockanimation", clockanimation, run_async=true)
-BLOCKANIMATION_HANDLER = DisableAbleCommandHandler("blockanimation", blockanimation, run_async=true)
-EARTHANIMATION_HANDLER = DisableAbleCommandHandler("earthanimation", earthanimation, run_async=true)
+SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
+RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
+SLAP_HANDLER = DisableAbleCommandHandler("slap", slap)
+PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
+ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
+TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
+SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
+BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
+RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
+DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
+EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball)
+TABLE_HANDLER = DisableAbleCommandHandler("table", table)
+SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
+WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
+GBUN_HANDLER = DisableAbleCommandHandler("gbun", gbun)
+GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam)
+CUDDLE_HANDLER = DisableAbleCommandHandler("cuddle", cuddle)
+FLIRT_HANDLER = DisableAbleCommandHandler("flirt", flirt,)   
+ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance) 
+UWU_HANDLER = DisableAbleCommandHandler("uwu", uwu)
+OWO_HANDLER = DisableAbleCommandHandler("owo", owo)
+GDMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning|good morning)"), goodmorning, friendly="goodmorning")
+GDNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight|good night)"), goodnight, friendly="goodnight")
+KILL_HANDLER = DisableAbleCommandHandler("kill",kill)
+LOVE_HANDLER = DisableAbleCommandHandler("love", love)
+HACK_HANDLER = DisableAbleCommandHandler("hack", hack)
+BOMBS_HANDLER = DisableAbleCommandHandler("bombs",bombs)
+MOONANIMATION_HANDLER = DisableAbleCommandHandler("moonanimation", moonanimation)
+CLOCKANIMATION_HANDLER = DisableAbleCommandHandler("clockanimation", clockanimation)
+BLOCKANIMATION_HANDLER = DisableAbleCommandHandler("blockanimation", blockanimation)
+EARTHANIMATION_HANDLER = DisableAbleCommandHandler("earthanimation", earthanimation)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(GBUN_HANDLER)
 dispatcher.add_handler(WEEBIFY_HANDLER)
