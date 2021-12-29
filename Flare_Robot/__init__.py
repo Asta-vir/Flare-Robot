@@ -96,6 +96,7 @@ if ENV:
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     FLARE_PHOTO = os.environ.get("FLARE_PHOTO", "https://telegra.ph/file/2a171330f0ad1fc02465c.jpg")
     BOT_NAME = os.environ.get("BOT_NAME", None)
+    STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -165,6 +166,7 @@ else:
     FLARE_PHOTO = Config.FLARE_PHOTO
     DB_URI = Config.DB_URI
     BOT_NAME = Config.BOT_NAME
+    STRING_SESSION = Comfig.STRING_SESSION
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
