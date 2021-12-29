@@ -199,7 +199,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Pirate King  just joined the group!!!", reply_to_message_id=reply,
+                    "Our king Keyaru-Sama just joined the group!!!", reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -237,8 +237,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "A Attacker just arrived in the group!
-                    ",
+                    "A Attacker just arrived in the group!",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
