@@ -107,7 +107,7 @@
       "DB_URI": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": ""
+         "value": "postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
