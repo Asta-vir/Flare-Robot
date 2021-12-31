@@ -34,10 +34,10 @@
          "required": true,
          "value": ""
       },    
-      "DATABASE_URL": {
+      "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
-         "required": true,
-         "value": "postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2"
+         "required": false,
+         "value": "sqldbtype://username:pw@hostname:port/db_name"
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
