@@ -73,7 +73,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
-    DB_URI = os.environ.get("DATABASE_URI", "postgres://iriinioe:1QP9rKfvmgdRfEYArrHQcjvIZ-u_KBvR@fanny.db.elephantsql.com/iriinioe")
+    DB_URI = os.environ.get("DATABASE_URI", "postgres://qhazacag:YdDPbUTz722YQNqpbCqjUdT927WFY4dC@fanny.db.elephantsql.com/qhazacag")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
