@@ -1,6 +1,6 @@
 from Flare_Robot import pbot as app
 from Flare_Robot.utils.errors import capture_err
-from Flare_Robot.bot_plugins.dbfunctions import (
+from Flare_Robot.utils.dbfunctions import (
     update_karma,
     get_karma,
     get_karmas,
