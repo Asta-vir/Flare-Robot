@@ -3,7 +3,7 @@ import threading
 
 from Flare_Robot.modules.helper_funcs.msg_types import Types
 from Flare_Robot.modules.sql import BASE, SESSION
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
+from sqlalchemy import Boolean, Column, BigInteger, String, UnicodeText, distinct, func
 
 
 class Notes(BASE):
