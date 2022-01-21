@@ -1,6 +1,6 @@
 import threading
 
-from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
+from sqlalchemy import Column, String, UnicodeText, Boolean, BigInteger, distinct, func
 
 from Flare_Robot.modules.helper_funcs.msg_types import Types
 from Flare_Robot.modules.sql import BASE, SESSION
