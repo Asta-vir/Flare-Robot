@@ -1,7 +1,7 @@
 import threading
 
 from Flare_Robot.modules.sql import BASE, SESSION
-from sqlalchemy import Column, Integer, String, UnicodeText, distinct, func
+from sqlalchemy import Column, BigInteger, String, UnicodeText, distinct, func
 
 
 class StickersFilters(BASE):
