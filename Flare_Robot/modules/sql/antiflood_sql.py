@@ -12,9 +12,9 @@ DEF_OBJ = (None, DEF_COUNT, DEF_LIMIT)
 class FloodControl(BASE):
     __tablename__ = "antiflood"
     chat_id = Column(String(14), primary_key=True)
-    user_id = Column(Integer)
-    count = Column(Integer, default=DEF_COUNT)
-    limit = Column(Integer, default=DEF_LIMIT)
+    user_id = Column(BigInteger)
+    count = Column(BigInteger, default=DEF_COUNT)
+    limit = Column(BigInteger, default=DEF_LIMIT)
 
     def __init__(self, chat_id):
         self.chat_id = str(chat_id)  # ensure string
@@ -26,8 +26,8 @@ class FloodControl(BASE):
 class FloodSettings(BASE):
     __tablename__ = "antiflood_settings"
     chat_id = Column(String(14), primary_key=True)
-    flood_type = Column(Integer, default=1)
-    value = Column(UnicodeText, default="0")
+    flood_type = Column(BigInteger, default=1)
+    value = Column(BigInteger, default="0")
 
     def __init__(self, chat_id, flood_type=1, value="0"):
         self.chat_id = str(chat_id)
