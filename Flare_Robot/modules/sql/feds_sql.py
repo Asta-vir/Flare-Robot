@@ -2,7 +2,7 @@ import threading
 
 from Flare_Robot import dispatcher
 from Flare_Robot.modules.sql import BASE, SESSION
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
+from sqlalchemy import Boolean, Column, BigInteger, String, UnicodeText
 from telegram.error import BadRequest, Unauthorized
 
 
