@@ -5,7 +5,7 @@ from Flare_Robot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
-    Integer,
+    BigInteger,
     String,
     UnicodeText,
     UniqueConstraint,
