@@ -194,7 +194,7 @@ def test(update: Update, context: CallbackContext):
     print(update.effective_message)
 
 
-@telethn.on(events.NewMessage(pattern="/alive"))
+@telethn.on(events.NewMessage(pattern="/check"))
 async def awake(event):
   ғʟᴀʀᴇ = event.sender.first_name
   ғʟᴀʀᴇ = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
