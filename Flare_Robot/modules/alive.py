@@ -19,7 +19,7 @@ async def awake(event):
   FLARE += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n"
 
   BUTTON = [[Button.url("🚑 Support", "https://t.me/Freia_Support"), Button.url("📢 Updates", "https://t.me/Freia_Updates")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=PIKACHU,  buttons=BUTTON)
+  await tbot.send_file(event.chat_id, PHOTO, caption=FLARE,  buttons=BUTTON)
 
 
 __mod_name__ = "Alive"
