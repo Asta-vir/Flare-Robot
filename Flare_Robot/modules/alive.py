@@ -1,25 +1,30 @@
-from telethon import events, Button, custom
 import os
+import re
+from platform import python_version as kontol
+from telethon import events, Button
+from telegram import __version__ as telever
+from telethon import __version__ as tlhver
+from pyrogram import __version__ as pyrover
 from Flare_Robot.events import register
 from Flare_Robot import telethn as tbot
-from Flare_Robot import telethn as tgbot
 
 
-PHOTO = "https://telegra.ph/file/1cd6d62ef6e8843e6b1cb.jpg"
+PHOTO = "https://telegra.ph/file/926039375cac9825e1e58.jpg"
 
 
 @register(pattern=("/alive"))
 async def awake(event):
-  FLARE = event.sender.first_name
-  FLARE = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛 ** \n\n"
-  FLARE += "**♡ I'm Working With sᴇxʏ Speed**\n\n"
-  FLARE += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
-  FLARE += "**♡ My Creator: [ᴀsᴛᴀ](http://t.me/Chifuyu_Matsuno_Kun)\n\n"
-  FLARE += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support **\n"
-  FLARE += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n"
-
-  BUTTON = [[Button.url("🚑 Support", "https://t.me/Freia_Support"), Button.url("📢 Updates", "https://t.me/Freia_Updates")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=FLARE,  buttons=BUTTON)
-
-
-__mod_name__ = "Alive"
+    TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Emiko Robot.** \n\n"
+    TEXT += "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
+    TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
+    TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
+    TEXT += f"**♡ My Creator: [ ᴀsᴛᴀ](http://t.me/Chifuyu_Matsuno_Kun)** \n\n"
+    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
+    TEXT += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**"
+    BUTTON = [
+        [
+            Button.url("📢 Updates", "https://t.me/Freia_Updates"),
+            Button.url("🚑 Support", "https://t.me/Freia_Support"),
+        ]
+    ]
+    await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
