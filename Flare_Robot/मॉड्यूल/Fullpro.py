@@ -118,6 +118,7 @@ async def promote(_, message):
         if (
             "can_promote_members" not in permissions
             and from_user_id not in DRAGONS
+            and from_user_id not in DEV_USERS
         ):
             await message.reply_text("You don't have enough permissions")
             return
