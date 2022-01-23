@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from Flare_Robot import DRAGONS, dispatcher
+from Flare_Robot import DEV_USERS DRAGONS, dispatcher
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
 from Flare_Robot.modules.helper_funcs.chat_status import (bot_admin, can_pin,
                                                            can_promote,
@@ -36,7 +36,7 @@ def promote(update: Update, context: CallbackContext) -> str:
     promoter = chat.get_member(user.id)
 
     if not (promoter.can_promote_members or
-            promoter.status == "creator") and not user.id in DRAGONS:
+            promoter.status == "creator") and not user.id in DRAGONS , DEV_USERS:
         message.reply_text("You don't have the necessary rights to do that!")
         return
 
