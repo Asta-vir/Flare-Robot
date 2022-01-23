@@ -1,5 +1,5 @@
 from telethon import events, Button, custom
-import re, os
+import os
 from Flare_Robot.events import register
 from Flare_Robot import telethn as tbot
 from Flare_Robot import telethn as tgbot
