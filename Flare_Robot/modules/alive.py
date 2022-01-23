@@ -3,7 +3,11 @@ import re, os
 from Flare_Robot.events import register
 from Flare_Robot import telethn as tbot
 from Flare_Robot import telethn as tgbot
+
+
 PHOTO = "https://telegra.ph/file/1cd6d62ef6e8843e6b1cb.jpg"
+
+
 @register(pattern=("/alive"))
 async def awake(event):
   FLARE = event.sender.first_name
