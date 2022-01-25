@@ -17,7 +17,7 @@ async def awake(event):
     TEXT = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
     TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
-    TEXT += f"**♡ My Creator: [ ᴀsᴛᴀ](http://t.me/Chifuyu_Matsuno_Kun)** \n\n"
+    TEXT += f"**♡ My Creator: [ ᴀsᴛᴀ](http://t.me/Asta_silva02)** \n\n"
     TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
     TEXT += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**"
     BUTTON = [
