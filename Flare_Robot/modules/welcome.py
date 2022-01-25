@@ -5,9 +5,8 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import SaitamaRobot.modules.sql.welcome_sql as sql
-import SaitamaRobot
-from SaitamaRobot import (
+import Flare_Robot.modules.sql.welcome_sql as sql
+from Flare_Robot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -19,18 +18,18 @@ from SaitamaRobot import (
     dispatcher,
     JOIN_LOGGER,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from Flare_Robot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from SaitamaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from SaitamaRobot.modules.helper_funcs.msg_types import get_welcome_type
-from SaitamaRobot.modules.helper_funcs.string_handling import (
+from Flare_Robot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Flare_Robot.modules.helper_funcs.msg_types import get_welcome_type
+from Flare_Robot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql.global_bans_sql import is_user_gbanned
+from Flare_Robot.modules.log_channel import loggable
+from Flare_Robot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
