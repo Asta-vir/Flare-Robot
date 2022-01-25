@@ -27,7 +27,7 @@ from Flare_Robot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
-    spamwtc,
+    spamwatch,
     dispatcher,
 )
 from Flare_Robot.modules.helper_funcs.chat_status import (
@@ -157,6 +157,7 @@ def send(update, message, keyboard, backup_message):
     return msg
 
 
+@run_async
 @loggable
 def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
     bot, job_queue = context.bot, context.job_queue
@@ -526,6 +527,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
     return ""
 
 
+@run_async
 def check_not_bot(member, chat_id, message_id, context):
     bot = context.bot
     member_dict = VERIFIED_USER_WAITLIST.pop((chat_id, member.id))
@@ -546,6 +548,7 @@ def check_not_bot(member, chat_id, message_id, context):
             pass
 
 
+@run_async
 def left_member(update: Update, context: CallbackContext):  # sourcery no-metrics
     bot = context.bot
     chat = update.effective_chat
@@ -655,6 +658,7 @@ def left_member(update: Update, context: CallbackContext):  # sourcery no-metric
             )
 
 
+@run_async
 @user_admin
 def welcome(update: Update, context: CallbackContext):
     args = context.args
@@ -717,6 +721,7 @@ def welcome(update: Update, context: CallbackContext):
             )
 
 
+@run_async
 @user_admin
 def goodbye(update: Update, context: CallbackContext):
     args = context.args
@@ -767,6 +772,7 @@ def goodbye(update: Update, context: CallbackContext):
             )
 
 
+@run_async
 @user_admin
 @loggable
 def set_welcome(update: Update, _) -> str:
@@ -791,6 +797,7 @@ def set_welcome(update: Update, _) -> str:
     )
 
 
+@run_async
 @user_admin
 @loggable
 def reset_welcome(update: Update, _) -> str:
@@ -810,6 +817,7 @@ def reset_welcome(update: Update, _) -> str:
     )
 
 
+@run_async
 @user_admin
 @loggable
 def set_goodbye(update: Update, _) -> str:
@@ -832,6 +840,7 @@ def set_goodbye(update: Update, _) -> str:
     )
 
 
+@run_async
 @user_admin
 @loggable
 def reset_goodbye(update: Update, _) -> str:
@@ -851,6 +860,7 @@ def reset_goodbye(update: Update, _) -> str:
     )
 
 
+@run_async
 @user_admin
 @loggable
 def welcomemute(update: Update, context: CallbackContext) -> str:
@@ -918,6 +928,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
     return ""
 
 
+@run_async
 @user_admin
 @loggable
 def clean_welcome(update: Update, context: CallbackContext) -> str:
@@ -959,6 +970,7 @@ def clean_welcome(update: Update, context: CallbackContext) -> str:
     return ""
 
 
+@run_async
 @user_admin
 def cleanservice(update: Update, context: CallbackContext) -> str:
     args = context.args
@@ -992,6 +1004,7 @@ def cleanservice(update: Update, context: CallbackContext) -> str:
         )
 
 
+@run_async
 def user_button(update: Update, context: CallbackContext):
     chat = update.effective_chat
     user = update.effective_user
@@ -1055,6 +1068,7 @@ def user_button(update: Update, context: CallbackContext):
         query.answer(text="You're not allowed to do this!")
 
 
+@run_async
 def user_captcha_button(update: Update, context: CallbackContext):
     # sourcery no-metrics
     chat = update.effective_chat
@@ -1177,11 +1191,13 @@ WELC_MUTE_HELP_TXT = (
 )
 
 
+@run_async
 @user_admin
 def welcome_help(update: Update, _):
     update.effective_message.reply_text(WELC_HELP_TXT, parse_mode=ParseMode.MARKDOWN)
 
 
+@run_async
 @user_admin
 def welcome_mute_help(update: Update, _):
     update.effective_message.reply_text(
@@ -1201,10 +1217,12 @@ def welcome_mute_help(update: Update, _):
 #     sql.set_custom_welcome(chat_id, welcome, sql.Types.TEXT)
 
 
+@run_async
 def __migrate__(old_chat_id, new_chat_id):
     sql.migrate_chat(old_chat_id, new_chat_id)
 
 
+@run_async
 def __chat_settings__(chat_id, _):
     welcome_pref = sql.get_welc_pref(chat_id)[0]
     goodbye_pref = sql.get_gdbye_pref(chat_id)[0]
