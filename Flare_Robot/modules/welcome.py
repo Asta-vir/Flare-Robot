@@ -23,7 +23,7 @@ from telegram.ext import (
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
 import Flare_Robot.modules.sql.welcome_sql as sql
-from zeldris import (
+from Flare_Robot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
