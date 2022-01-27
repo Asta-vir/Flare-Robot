@@ -29,11 +29,10 @@ from Flare_Robot import (
     WOLVES,
     INFOPIC,
     dispatcher,
-    get_readable_time,
     StartTime,
     sw,
 )
-from Flare_Robot.__main__ import STATS, TOKEN, USER_INFO
+from Flare_Robot.__main__ import STATS, TOKEN, USER_INFO, get_readable_time
 import Flare_Robot.modules.sql.userinfo_sql as sql
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
 from Flare_Robot.modules.sql.global_bans_sql import is_user_gbanned
