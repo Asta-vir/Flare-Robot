@@ -5,6 +5,9 @@ import requests
 import time
 import datetime
 
+from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
+from platform import python_version 
+
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
