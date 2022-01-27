@@ -30,6 +30,8 @@ from Flare_Robot import (
     INFOPIC,
     dispatcher,
     StartTime,
+    SUPPORT_CHAT,
+    UPDATE_CHANNEL,
     sw,
 )
 from Flare_Robot.__main__ import STATS, TOKEN, USER_INFO, get_readable_time
