@@ -28,7 +28,6 @@ from Flare_Robot import (
     WOLVES,
     INFOPIC,
     dispatcher,
-    StartTime,
     sw,
 )
 from Flare_Robot.__main__ import STATS, TOKEN, USER_INFO
@@ -427,7 +426,6 @@ def set_about_me(update: Update, context: CallbackContext):
 @sudo_plus
 def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
-    botuptime = get_readable_time((time.time() - StartTime))
     status = "*╒═══「 System statistics 」*\n\n"
     status += "*➢ Python Version:* " + python_version() + "\n"
     status += "*➢ python-Telegram-Bot:* " + str(ptbver) + "\n"
