@@ -22,17 +22,17 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "2103013523:AAFf0-qeaYmaWP20pUH-_n5QcM9FLOoN2GA"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "5671039"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "4fe31100223e1167bde36342712fdbda"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -42,16 +42,16 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2047572617"
+         "value": "2105723446"
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "OFFICIAL_MASASHI"
+         "value": "Asta_Silva02"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah.",
          "required": true,
-         "value": "foundingtitansupport"
+         "value": "Freia_Support"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -82,7 +82,7 @@
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": ""
+         "value": "6v5wd314_h1U6JPAO6CECrbhuzYsWoTUctXcR7GE~5tzHbNaL1rEhfdfqse6Wmx6"
       },
  
       "STRICT_GBAN": {
@@ -107,12 +107,12 @@
       "DB_URI": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": "postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2"
+         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
       },
       "DATABASE_URI": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": "postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2"
+         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
@@ -164,7 +164,7 @@
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
          "required": false,
-         "value": ". "
+         "value": ""
       },
       "WALL_API": {
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
@@ -174,27 +174,27 @@
        "MONGO_DB_URI": {
          "description": "Your Mongo Database Url, create it from https://cloud.mongodb.com/",
          "required": true,
-         "value": ""
+         "value": "mongodb+srv://Flare_DB:FreiaDb@flaredb.mqysn.mongodb.net/FlareDb?retryWrites=true&w=majority"
        }, 
        "REDIS_URI": {
          "description": "Redis Url create one from redislabs.com.",
          "required": true,
-         "value": ""
+         "value": "redis://Asta:Asta_123@redis-11259.c277.us-east-1-3.ec2.cloud.redislabs.com:11259/Asta"
        }, 
        "APP_ID": {
          "description": "API ID of 2nd telegram account if you dont have two accounts then use the same accounts API ID, but i recommend using 2nd accounts API ID",
          "required": true,
-         "value": ""
+         "value": "5671039"
       }, 
       "APP_HASH": {
          "description": " API HASH of 2nd telegram account if you dont two accounts then use the same accounts API HASH, but i recommend using 2nd accounts API HASH.",
          "required": true,
-         "value": ""
+         "value": "4fe31100223e1167bde36342712fdbda"
        }, 
        "STRING_SESSION": {
          "description": "Telethon String Session, create it from https://repl.it/@SpEcHiDe/GenerateStringSession .",
          "required": true,
-         "value": ""
+         "value": "1BVtsOH8BuyV7B8SK4fo2AFlm55w8Rz5xn591IF3_ZmbpLUF5AHQJDIxpcpo05gQ6o6tOSQ0-YNFCesgHD-ammrrl6sQqSc5L_mnxOJM5oMyUB8hD1WYLkPDeWwDnfL-S42njeP_Q91-FZYiug7DiraHzkMqGEgFNdd_L3feh-w9kcN_dORVTzbNO4b0BPZ6glMoq0nuGMsMvcIzygCJSetFzof7-LbsupQOP7innLQoivZiIWyt4kogTJlzKJw8ZChGRq-2fBHgdIyElaQtGGYYf6RL6fT0E6qmSqyVNCHrrTw7pyoSf5MBfdUK-nEldnaV6DsFy7suHCvC73A5yoQ_og5EvPmw="
       }
       
    }
