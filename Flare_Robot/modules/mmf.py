@@ -1,8 +1,19 @@
 import os
 import requests
+
 from Flare_Robot.events import register as Flare
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
+from Flare_Robot import telethn as bot
+from Flare_Robot import dispatcher
+
 from PIL import Image, ImageFont, ImageDraw
+
+from telegram.utils.helpers import mention_html
+from telegram import TelegramError, Update
+from telegram.ext import CallbackContext
+import cloudscraper
+import urllib.request as urllib
+
 
 
 
