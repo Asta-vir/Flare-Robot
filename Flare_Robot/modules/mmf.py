@@ -1,5 +1,8 @@
 import os
 import requests
+import textwrap
+from bs4 import BeautifulSoup as bs
+
 
 from Flare_Robot.events import register as Flare
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
