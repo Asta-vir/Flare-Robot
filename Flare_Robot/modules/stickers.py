@@ -15,7 +15,7 @@ from telegram.utils.helpers import mention_html
 
 from Flare_Robot import dispatcher
 from Flare_Robot.modules.disable import DisableAbleCommandHandler
-from Flare_Robot.events import register as Nobara
+from Flare_Robot.events import register as Flare
 from Flare_Robot import telethn as bot
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
@@ -479,7 +479,7 @@ def delsticker(update, context):
 Credit = "This Plugin Made by Kittu (@A_viyu), if you're using this code in your bot. there is no issue but don't remove this line" 
 
 
-@Nobara(pattern="^/mmf ?(.*)")
+@Flare(pattern="^/mmf ?(.*)")
 async def handler(event):
     if event.fwd_from:
         return
