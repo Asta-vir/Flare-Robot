@@ -9,7 +9,7 @@
          "Flare"
       ],   
   "logo":    "https://telegra.ph/file/ac41e5086929782d252ef.jpg",
- "repository": "https://github.com/Asta-silva/Flare-Robot",
+ "repository": "https://github.com/Asta-vir/Flare-Robot",
    "addons": [
       {
          "options": {
@@ -27,12 +27,12 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "5671039"
+         "value": ""
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "4fe31100223e1167bde36342712fdbda"
+         "value": ""
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -66,23 +66,23 @@
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
          "required": true,
-         "value": "V7NS1NBFEL4X24L6"
+         "value": ""
       },
 
       "TIME_API_KEY": {
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
          "required": true,
-         "value": "2AS711XS1O9B"
+         "value": ""
       },
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Eren support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "1755728237"
+         "value": "2105723446"
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": "6v5wd314_h1U6JPAO6CECrbhuzYsWoTUctXcR7GE~5tzHbNaL1rEhfdfqse6Wmx6"
+         "value": ""
       },
  
       "STRICT_GBAN": {
@@ -92,7 +92,7 @@
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": " "
+         "value": ""
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
@@ -105,14 +105,14 @@
          "value": ""
       },
       "DB_URI": {
-         "description": "Add your Db_URI.",
+         "description": "Add your Db if you don't have one get it from elephantsql.com .",
          "required": true,
-         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
+         "value": ""
       },
       "DATABASE_URI": {
          "description": "Add your Db_URI.",
          "required": true,
-         "value": "postgresql://qzjdsqfv:4FqGkkMd5cTapST-n2N7kZ5Uct1hBCB1@castor.db.elephantsql.com/qzjdsqfv"
+         "value": "Add the same db that u added above if you don't have one get if from elephantsql.com  note: DB_URI and DATABASE_URI the values of this two should be same."
       },
       "DATABASE_URL": {
          "description": "Add your Db_URI.",
