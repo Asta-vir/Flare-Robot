@@ -10,7 +10,7 @@ Can be found on telegram as [Flare](https://t.me/Flare_robot).
 
 The Support group can be reached out to at [Flare Support](https://t.me/Freia_Support), where you can ask for help about [Flare](https://t.me/Flare_Robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-Owner bot [ASTA](https://t.me/Chifuyu_Matsuno_Kun) 
+Owner bot [ASTA](https://t.me/Asta_Silva02) he leaved the telegram for a while he will be back soon.
 
 ## How to setup/deploy.
 
@@ -54,7 +54,7 @@ defaults set in the sample_config, hence making it easier to upgrade.
 
 An example `config.py` file could be:
 ```
-from SaitamaRobot.sample_config import Config
+from Flare_Robot.sample_config import Config
 
 class Development(Config):
     OWNER_ID = 2105723446  # your telegram ID
