@@ -106,7 +106,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"Add Flare To Your Group",
-                            url=f"https://telegram.dog/Flare_Robot?startgroup=true")
+                            url=f"https://telegram.dog/@{BOT_USERNAME}?startgroup=true")
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
@@ -200,7 +200,7 @@ async def awake(event):
   ғʟᴀʀᴇ = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
   ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n"
   ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
-  ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
+  ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/@{OWNER_USERNAME})\n\n"
   ғʟᴀʀᴇ += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support **\n\n"
   ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
   FLARE_BUTTON = [
