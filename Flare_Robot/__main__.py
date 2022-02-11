@@ -10,6 +10,7 @@ from Flare_Robot import (
     DONATION_LINK,
     LOGGER,
     OWNER_ID,
+    BOT_USERNAME,
     PORT,
     TOKEN,
     URL,
