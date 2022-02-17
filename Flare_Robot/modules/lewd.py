@@ -640,7 +640,7 @@ def baka(update, context):
 
 @register(pattern=("/flare"))
 async def awake(event):
-    TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's
+    TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
     TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
     TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
