@@ -638,6 +638,8 @@ def baka(update, context):
     msg.reply_video(nekos.img(target))
 
 
+PHOTO = "https://telegra.ph/file/a5c08a3d10e1f99559f6b.jpg"
+
 @register(pattern=("/flare"))
 async def awake(event):
     TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
