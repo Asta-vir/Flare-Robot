@@ -2,6 +2,15 @@ import os
 import html
 import nekos
 import requests
+import re 
+from Flare_Robot import BOT_USERNAME
+from Flare_Robot.events import register
+from Flare_Robot import telethn as tbotfrom platform import python_version as kontol
+from telethon import events, Button
+from telegram import __version__ as telever
+from telethon import __version__ as tlhver
+from pyrogram import __version__ as pyrover
+from time import sleep
 from PIL import Image
 from telegram import ParseMode
 from Flare_Robot import dispatcher, updater
@@ -627,6 +636,23 @@ def baka(update, context):
     msg = update.effective_message
     target = "baka"
     msg.reply_video(nekos.img(target))
+
+
+@register(pattern=("/flare"))
+async def awake(event):
+    TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's
+    TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
+    TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
+    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
+    BUTTON = [
+        [
+            Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/Asta_silva02"),
+            Button.url("🚑 ᴍᴀɪɴ ʙᴏʏ", "https://t.me/Flare_Robot"),
+        ],
+        [   Button.url("📢 ᴛʜɪs ʙᴏᴛ", "https://t.me/@{BOT_USERNAME}")
+        ]
+    ]
+    await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
 
 
 @run_async
