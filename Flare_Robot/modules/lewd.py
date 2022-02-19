@@ -5,7 +5,8 @@ import requests
 import re 
 from Flare_Robot import BOT_USERNAME
 from Flare_Robot.events import register
-from Flare_Robot import telethn as tbotfrom platform import python_version as kontol
+from Flare_Robot import telethn as tbot
+from platform import python_version as kontol
 from telethon import events, Button
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
