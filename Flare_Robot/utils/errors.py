@@ -1,7 +1,7 @@
 import sys
 import traceback
 from functools import wraps
-from Flare_Robot import pbot, EVENT_LOGS
+from Flare_Robot import pgram as pbot, EVENT_LOGS
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
 
