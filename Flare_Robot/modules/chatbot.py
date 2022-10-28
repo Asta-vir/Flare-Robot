@@ -117,7 +117,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://kukiapi.xyz/api/apikey=KUKItg111XlOZ/yuzuki/moezill/message='+Message)
+        kukiurl = requests.get('https://api.bakufu.tech/api/chatbot/cleverbot?name=flare&owner=arsh&message='+Message) #using bakufu's chatbot api
         Kuki = json.loads(kukiurl.text)
         kuki = Kuki['reply']
         sleep(0.3)
